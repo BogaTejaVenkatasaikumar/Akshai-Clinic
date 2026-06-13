@@ -7,7 +7,6 @@ import Hero from "./components/Hero";
 import Stats from "./components/Stats";
 import About from "./components/About";
 import Services from "./components/Services";
-import Transformation from "./components/Transformation";
 import Gallery from "./components/Gallery";
 import Reviews from "./components/Reviews";
 import OffersAndFaqs from "./components/OffersAndFaqs";
@@ -74,9 +73,6 @@ export default function App() {
 
             {/* Catalog Grid Switcher */}
             <Services onServiceSelect={handleServiceSelect} />
-
-            {/* Interactive draggable Before/After slider showcase */}
-            <Transformation />
 
             {/* Fine Arts Gallery */}
             <Gallery />

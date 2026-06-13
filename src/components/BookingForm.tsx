@@ -108,10 +108,8 @@ export default function BookingForm({ selectedService, onClearService }: Booking
       });
       onClearService();
 
-      // Launch WhatsApp automatic routing window
-      setTimeout(() => {
-        window.open(whatsappUrl, "_blank");
-      }, 1500);
+      // Launch WhatsApp automatic routing window instantly
+      window.location.href = whatsappUrl;
 
     } catch (err: any) {
       setErrorMsg(err.message || "Our server has rate-limited your IP to prevent spam bookings. Please wait 1 minute.");
