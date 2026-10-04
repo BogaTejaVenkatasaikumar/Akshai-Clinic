@@ -8,16 +8,16 @@ interface LogoProps {
 
 export default function Logo({ className = "", size = "md" }: LogoProps) {
   const sizes = {
-    sm: "h-11 w-11",
-    md: "h-16 w-16",
-    lg: "h-24 w-24",
-    xl: "h-36 w-36 sm:h-44 sm:w-44",
+    sm: "h-13 w-13 sm:h-15 sm:w-15",
+    md: "h-20 w-20 sm:h-24 sm:w-24",
+    lg: "h-28 w-28 sm:h-32 sm:w-32",
+    xl: "h-40 w-40 sm:h-48 sm:w-48",
   };
 
   const textSizes = {
-    sm: "text-xs",
-    md: "text-sm",
-    lg: "text-lg",
+    sm: "text-sm",
+    md: "text-base",
+    lg: "text-xl",
     xl: "text-2xl",
   };
 

@@ -301,7 +301,7 @@ export default function MenuBookModal({ isOpen, onClose }: MenuBookModalProps) {
           <p className="text-[9.5px] tracking-[0.4em] uppercase text-cream-dim mb-5">
             Unisex &middot; Unlimited &middot; Unstoppable
           </p>
-          <div className="w-28 h-28 rounded-full border border-amber-400/50 p-1 mb-5 shadow-2xl">
+          <div className="w-32 h-32 sm:w-36 sm:h-36 rounded-full border border-amber-400/50 p-1 mb-5 shadow-2xl">
             <img src={akshaiLogo} alt="AM Unisex Salon logo" className="w-full h-full rounded-full object-cover" />
           </div>
           <h1 className="font-serif text-4xl text-amber-400 tracking-wider mb-1">AM</h1>
