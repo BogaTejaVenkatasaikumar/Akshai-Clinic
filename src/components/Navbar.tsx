@@ -151,10 +151,10 @@ export default function Navbar({ onBookClick }: NavbarProps) {
               <button
                 onClick={() => setIsMenuModalOpen(true)}
                 className="inline-flex items-center gap-2 rounded-sm border border-secondary/35 bg-bg-charcoal/80 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-luxury-cream transition-all duration-200 hover:-translate-y-0.5 hover:border-secondary/70 hover:bg-secondary/10 hover:text-white"
-                aria-label="View Rate Card"
+                aria-label="View Menu Card"
               >
                 <BookOpen className="w-3.5 h-3.5 text-secondary" />
-                Rate Card
+                Menu Card
               </button>
               <a
                 href="tel:+917569979965"
@@ -246,7 +246,7 @@ export default function Navbar({ onBookClick }: NavbarProps) {
                   className="flex items-center justify-center gap-2 font-body text-sm font-semibold text-luxury-cream/90 bg-white/5 py-3 rounded-md hover:bg-white/10"
                 >
                   <BookOpen className="w-4 h-4 text-secondary" />
-                  View Rate Card
+                  View Menu Card
                 </button>
                 <a
                   href="tel:+917569979965"
@@ -271,7 +271,7 @@ export default function Navbar({ onBookClick }: NavbarProps) {
         )}
       </AnimatePresence>
 
-      {/* Rate Card Menu Modal */}
+      {/* Menu Card Menu Modal */}
       <MenuBookModal
         isOpen={isMenuModalOpen}
         onClose={() => setIsMenuModalOpen(false)}

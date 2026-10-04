@@ -209,10 +209,9 @@ const categories: CategoryData[] = [
 
 export default function MenuBookModal({ isOpen, onClose }: MenuBookModalProps) {
   const [currentPage, setCurrentPage] = useState(0);
-  const [flipping, setFlipping] = useState(false);
-  const [flipDirection, setFlipDirection] = useState<"fwd" | "back">("fwd");
-  const [displayFront, setDisplayFront] = useState(false);
-  const [frontPageIdx, setFrontPageIdx] = useState(0);
+  const [animating, setAnimating] = useState(false);
+  const [slideDir, setSlideDir] = useState<"left" | "right">("left");
+  const [visible, setVisible] = useState(true);
 
   const touchStartX = useRef(0);
   const touchStartY = useRef(0);
@@ -229,7 +228,7 @@ export default function MenuBookModal({ isOpen, onClose }: MenuBookModalProps) {
     };
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [isOpen, currentPage, flipping]);
+  }, [isOpen, currentPage, animating]);
 
   // Lock body scroll when modal is open
   useEffect(() => {
@@ -238,26 +237,23 @@ export default function MenuBookModal({ isOpen, onClose }: MenuBookModalProps) {
     } else {
       document.body.style.overflow = "auto";
     }
-    return () => {
-      document.body.style.overflow = "auto";
-    };
+    return () => { document.body.style.overflow = "auto"; };
   }, [isOpen]);
 
   if (!isOpen) return null;
 
   const goTo = (target: number) => {
-    if (flipping || target < 0 || target >= totalPages || target === currentPage) return;
-    const dir = target > currentPage ? "fwd" : "back";
-    setFlipDirection(dir);
-    setFlipping(true);
-    setFrontPageIdx(target);
-    setDisplayFront(true);
+    if (animating || target < 0 || target >= totalPages || target === currentPage) return;
+    const dir = target > currentPage ? "left" : "right";
+    setSlideDir(dir);
+    setAnimating(true);
+    setVisible(false);
 
     setTimeout(() => {
       setCurrentPage(target);
-      setDisplayFront(false);
-      setFlipping(false);
-    }, 420);
+      setVisible(true);
+      setTimeout(() => setAnimating(false), 220);
+    }, 200);
   };
 
   const getPageTitle = (idx: number) => {
@@ -522,13 +518,13 @@ export default function MenuBookModal({ isOpen, onClose }: MenuBookModalProps) {
           <div className="flex items-center gap-2">
             <BookOpen className="w-4 h-4 text-amber-400" />
             <span className="text-xs uppercase font-serif tracking-[0.25em] text-cream font-medium">
-              Rate Card &middot; {getPageTitle(currentPage)}
+              Menu Card &middot; {getPageTitle(currentPage)}
             </span>
           </div>
           <button
             onClick={onClose}
             className="p-1 rounded-full text-cream-dim hover:text-white hover:bg-white/10 transition-colors"
-            aria-label="Close rate card"
+            aria-label="Close Menu Card"
           >
             <X className="w-5 h-5" />
           </button>
@@ -557,40 +553,28 @@ export default function MenuBookModal({ isOpen, onClose }: MenuBookModalProps) {
 
           {/* Back page (current page) */}
           <div
-            className={`absolute inset-0 bg-[#121012] transition-transform duration-300 ${
-              flipping
-                ? flipDirection === "fwd"
-                  ? "rotate-y-[-90deg] opacity-0 scale-95"
-                  : "rotate-y-[90deg] opacity-0 scale-95"
-                : "rotate-y-0 opacity-100 scale-100"
-            }`}
-            style={{ transformStyle: "preserve-3d" }}
+          {/* Single page — slides out then new page slides in */}
+          <div
+            className="absolute inset-0 bg-[#121012] overflow-hidden"
+            style={{
+              transition: "opacity 200ms ease, transform 200ms ease",
+              opacity: visible ? 1 : 0,
+              transform: visible
+                ? "translateX(0)"
+                : slideDir === "left"
+                ? "translateX(-18px)"
+                : "translateX(18px)",
+            }}
           >
             {renderPageContent(currentPage)}
           </div>
-
-          {/* Front page during flip animation */}
-          {displayFront && (
-            <div
-              className={`absolute inset-0 bg-[#121012] transition-transform duration-300 ${
-                flipping
-                  ? "rotate-y-0 opacity-100 scale-100"
-                  : flipDirection === "fwd"
-                  ? "rotate-y-[90deg] opacity-0 scale-95"
-                  : "rotate-y-[-90deg] opacity-0 scale-95"
-              }`}
-              style={{ transformStyle: "preserve-3d" }}
-            >
-              {renderPageContent(frontPageIdx)}
-            </div>
-          )}
         </div>
 
         {/* Footer controls: Previous, Page indicator, Next */}
         <div className="w-full flex items-center justify-between px-5 py-3 border-t border-cream/10 bg-[#161316]">
           <button
             onClick={() => goTo(currentPage - 1)}
-            disabled={currentPage === 0 || flipping}
+            disabled={currentPage === 0 || animating}
             className="flex items-center gap-1 px-3 py-1.5 rounded-full border border-amber-400/30 text-xs text-amber-400 disabled:opacity-20 hover:bg-amber-400/10 transition-colors"
           >
             <ChevronLeft className="w-4 h-4" />
@@ -606,7 +590,7 @@ export default function MenuBookModal({ isOpen, onClose }: MenuBookModalProps) {
 
           <button
             onClick={() => goTo(currentPage + 1)}
-            disabled={currentPage === totalPages - 1 || flipping}
+            disabled={currentPage === totalPages - 1 || animating}
             className="flex items-center gap-1 px-3 py-1.5 rounded-full border border-amber-400/30 text-xs text-amber-400 disabled:opacity-20 hover:bg-amber-400/10 transition-colors"
           >
             <span className="hidden sm:inline text-[11px] uppercase tracking-wider">Next</span>
@@ -631,3 +615,4 @@ export default function MenuBookModal({ isOpen, onClose }: MenuBookModalProps) {
     </div>
   );
 }
+
