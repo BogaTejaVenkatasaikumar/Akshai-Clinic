@@ -5,7 +5,7 @@ export default function FloatingFAB() {
   const whatsappUrl = "https://wa.me/917569979965?text=Hello%20Akshai%20Unisex%20Salon!%20I%20would%20like%20to%20inquire%20about%20your%20services%20and%20availabilities.";
 
   return (
-    <div className="fixed bottom-6 left-6 md:left-auto md:right-6 z-30 flex flex-col gap-3">
+    <div className="fixed bottom-5 right-4 md:right-6 md:bottom-6 z-30 flex flex-col items-center gap-2.5 sm:gap-3">
       
       {/* Instagram Floating Trigger */}
       <a

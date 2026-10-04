@@ -89,8 +89,8 @@ export default function Navbar({ onBookClick }: NavbarProps) {
       <header
         className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
           scrolled
-            ? "bg-bg-dark/85 backdrop-blur-md shadow-lg border-b border-primary/15 py-3"
-            : "bg-transparent py-5"
+            ? "bg-bg-dark/95 backdrop-blur-md shadow-lg border-b border-primary/15 py-3"
+            : "bg-bg-dark/85 sm:bg-transparent backdrop-blur-md sm:backdrop-blur-none border-b border-white/5 sm:border-none py-3.5 sm:py-5"
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

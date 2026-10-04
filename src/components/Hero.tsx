@@ -58,7 +58,7 @@ export default function Hero({ onBookClick }: HeroProps) {
   return (
     <section
       id="home"
-      className="relative min-h-[620px] sm:min-h-[700px] h-[100svh] w-full bg-bg-dark overflow-hidden"
+      className="relative min-h-[100svh] sm:h-[100svh] w-full bg-bg-dark overflow-hidden"
     >
       <div className="absolute inset-0">
         <AnimatePresence mode="wait">
@@ -84,8 +84,8 @@ export default function Hero({ onBookClick }: HeroProps) {
         </AnimatePresence>
       </div>
 
-      <div className="relative flex h-full max-w-7xl flex-col justify-center px-4 sm:px-6 lg:px-8 mx-auto">
-        <div className="mt-20 max-w-3xl sm:mt-24">
+      <div className="relative flex min-h-[100svh] sm:h-full max-w-7xl flex-col justify-start sm:justify-center pt-28 sm:pt-0 pb-20 sm:pb-0 px-4 sm:px-6 lg:px-8 mx-auto">
+        <div className="max-w-3xl sm:mt-24">
           <motion.div
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
