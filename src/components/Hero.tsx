@@ -133,7 +133,7 @@ export default function Hero({ onBookClick }: HeroProps) {
           >
             <button
               onClick={onBookClick}
-              className="cursor-pointer rounded-sm bg-gradient-to-r from-primary to-secondary px-6 py-3.5 text-center text-xs font-semibold uppercase tracking-wider text-white shadow-[0_4px_20px_rgba(215,177,93,0.24)] transition-all duration-300 hover:-translate-y-[2px] hover:shadow-[0_8px_25px_rgba(215,177,93,0.35)] sm:px-8 sm:py-4 md:text-sm"
+              className="cursor-pointer rounded-full bg-gradient-to-r from-primary to-secondary px-6 py-3.5 text-center text-xs font-semibold uppercase tracking-wider text-white shadow-[0_4px_20px_rgba(215,177,93,0.24)] transition-all duration-300 hover:-translate-y-[2px] hover:shadow-[0_8px_25px_rgba(215,177,93,0.35)] sm:px-8 sm:py-4 md:text-sm"
             >
               Book Appointment
             </button>
@@ -141,7 +141,7 @@ export default function Hero({ onBookClick }: HeroProps) {
               href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 rounded-sm border border-white/10 bg-bg-charcoal/86 px-6 py-3.5 text-xs font-semibold uppercase tracking-wider text-luxury-cream backdrop-blur-sm transition-all duration-300 hover:-translate-y-[2px] hover:border-secondary/45 sm:px-8 sm:py-4 md:text-sm"
+              className="flex items-center justify-center gap-2 rounded-full border border-white/10 bg-bg-charcoal/86 px-6 py-3.5 text-xs font-semibold uppercase tracking-wider text-luxury-cream backdrop-blur-sm transition-all duration-300 hover:-translate-y-[2px] hover:border-secondary/45 sm:px-8 sm:py-4 md:text-sm"
             >
               <MessageSquare className="h-4 w-4 text-[#25D366]" />
               Inquire via WhatsApp
@@ -155,7 +155,7 @@ export default function Hero({ onBookClick }: HeroProps) {
             className="grid max-w-lg grid-cols-1 gap-3 border-t border-white/10 pt-5 sm:grid-cols-3 sm:gap-4 sm:pt-6"
           >
             <div className="flex items-center gap-2">
-              <div className="rounded-sm border border-secondary/25 bg-primary/20 p-2">
+              <div className="rounded-full border border-secondary/25 bg-primary/20 p-2">
                 <Star className="h-4 w-4 fill-secondary text-secondary" />
               </div>
               <div>
@@ -167,7 +167,7 @@ export default function Hero({ onBookClick }: HeroProps) {
             </div>
 
             <div className="flex items-center gap-2">
-              <div className="rounded-sm border border-accent/25 bg-accent/20 p-2">
+              <div className="rounded-full border border-accent/25 bg-accent/20 p-2">
                 <Award className="h-4 w-4 text-white" />
               </div>
               <div>
@@ -179,7 +179,7 @@ export default function Hero({ onBookClick }: HeroProps) {
             </div>
 
             <div className="flex items-center gap-2">
-              <div className="rounded-sm border border-secondary/25 bg-primary/20 p-2">
+              <div className="rounded-full border border-secondary/25 bg-primary/20 p-2">
                 <ShieldCheck className="h-4 w-4 text-secondary" />
               </div>
               <div>

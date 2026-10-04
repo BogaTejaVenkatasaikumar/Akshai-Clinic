@@ -16,7 +16,7 @@ export default function FloatingFAB() {
         aria-label="Direct message us on Instagram"
       >
         <Instagram className="w-5 h-5 group-hover:scale-110 transition-transform text-pink-500" />
-        <span className="absolute right-14 bg-bg-charcoal border border-white/5 px-2.5 py-1 text-[10px] font-bold tracking-wider text-white uppercase rounded-sm opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap shadow-md pointer-events-none hidden md:block">
+        <span className="absolute right-14 bg-bg-charcoal border border-white/5 px-2.5 py-1 text-[10px] font-bold tracking-wider text-white uppercase rounded-full opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap shadow-md pointer-events-none hidden md:block">
           Instagram Feed
         </span>
       </a>
@@ -31,7 +31,7 @@ export default function FloatingFAB() {
         <div className="absolute inset-0 rounded-full bg-secondary/10 animate-ping opacity-75 pointer-events-none" />
         
         <Phone className="w-5 h-5 group-hover:scale-110 transition-transform text-secondary font-bold" />
-        <span className="absolute right-14 bg-bg-charcoal border border-white/5 px-2.5 py-1 text-[10px] font-bold tracking-wider text-white uppercase rounded-sm opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap shadow-md pointer-events-none hidden md:block">
+        <span className="absolute right-14 bg-bg-charcoal border border-white/5 px-2.5 py-1 text-[10px] font-bold tracking-wider text-white uppercase rounded-full opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap shadow-md pointer-events-none hidden md:block">
           Call Reception
         </span>
       </a>
@@ -48,7 +48,7 @@ export default function FloatingFAB() {
         <div className="absolute inset-0 rounded-full bg-[#25D366]/20 animate-ping opacity-75 pointer-events-none" style={{ animationDuration: '2s' }} />
         
         <MessageSquare className="w-6 h-6 group-hover:scale-110 transition-transform fill-white/15" />
-        <span className="absolute right-14 bg-bg-charcoal border border-white/10 px-2.5 py-1 text-[10px] font-bold tracking-wider text-white uppercase rounded-sm opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap shadow-md pointer-events-none hidden md:block">
+        <span className="absolute right-14 bg-bg-charcoal border border-white/10 px-2.5 py-1 text-[10px] font-bold tracking-wider text-white uppercase rounded-full opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap shadow-md pointer-events-none hidden md:block">
           WhatsApp Desk
         </span>
       </a>

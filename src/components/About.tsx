@@ -60,8 +60,8 @@ export default function About() {
               className="col-span-9 relative"
             >
               {/* Outer Burgundy Glow Boundary */}
-              <div className="absolute -inset-1 rounded-sm bg-gradient-to-r from-primary to-accent opacity-30 blur-sm" />
-              <div className="relative overflow-hidden shadow-2xl rounded-sm aspect-[4/5] bg-neutral-900 border border-white/10 group">
+              <div className="absolute -inset-1 rounded-full bg-gradient-to-r from-primary to-accent opacity-30 blur-sm" />
+              <div className="relative overflow-hidden shadow-2xl rounded-full aspect-[4/5] bg-neutral-900 border border-white/10 group">
                 <img
                   src={LOCAL_ASSETS.salonInteriorMain}
                   alt="Akshai Unisex Salon Main Lounge"
@@ -79,8 +79,8 @@ export default function About() {
               transition={{ duration: 0.8, delay: 0.25, ease: "easeOut" }}
               className="col-span-7 absolute -bottom-10 -right-4 md:-right-8"
             >
-              <div className="absolute -inset-1 rounded-sm bg-gradient-to-r from-secondary to-accent opacity-25" />
-              <div className="relative overflow-hidden shadow-2xl rounded-sm aspect-square bg-bg-charcoal border border-white/15">
+              <div className="absolute -inset-1 rounded-full bg-gradient-to-r from-secondary to-accent opacity-25" />
+              <div className="relative overflow-hidden shadow-2xl rounded-full aspect-square bg-bg-charcoal border border-white/15">
                 <img
                   src={LOCAL_ASSETS.skinCareRoom}
                   alt="Hygienic treatment rooms"
@@ -96,7 +96,7 @@ export default function About() {
               initial={{ opacity: 0, scale: 0.8 }}
               animate={isInView ? { opacity: 1, scale: 1 } : {}}
               transition={{ duration: 0.5, delay: 0.4 }}
-              className="absolute -top-6 -left-6 bg-gradient-to-br from-primary to-secondary px-5 py-4 rounded-sm border border-white/10 shadow-2xl z-20 hidden sm:block"
+              className="absolute -top-6 -left-6 bg-gradient-to-br from-primary to-secondary px-5 py-4 rounded-full border border-white/10 shadow-2xl z-20 hidden sm:block"
             >
               <p className="text-3xl font-display font-extrabold text-luxury-cream leading-none mb-1">8+</p>
               <p className="text-[10px] font-semibold uppercase tracking-widest text-luxury-cream/80">Years of</p>
@@ -135,7 +135,7 @@ export default function About() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={isInView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.5, delay: 0.2 + index * 0.1 }}
-                  className="p-5 rounded-sm bg-bg-charcoal/60 border border-white/5 hover:border-primary/30 hover:bg-bg-charcoal/90 transition-all"
+                  className="p-5 rounded-full bg-bg-charcoal/60 border border-white/5 hover:border-primary/30 hover:bg-bg-charcoal/90 transition-all"
                 >
                   <div className="flex items-center gap-3 mb-2.5">
                     <div className="h-9 w-9 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center">

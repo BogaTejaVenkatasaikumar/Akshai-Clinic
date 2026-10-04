@@ -35,7 +35,7 @@ export default function OffersAndFaqs() {
                 return (
                   <div
                     key={faq.id}
-                    className="rounded-sm bg-bg-dark border border-white/5 overflow-hidden transition-all duration-300"
+                    className="rounded-full bg-bg-dark border border-white/5 overflow-hidden transition-all duration-300"
                   >
                     {/* Collapsible Header toggle */}
                     <button

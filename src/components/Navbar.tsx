@@ -74,7 +74,7 @@ export default function Navbar({ onBookClick }: NavbarProps) {
     setActiveSection(id);
     const element = document.getElementById(id);
     if (element) {
-      const topOffset = element.offsetTop - 80;
+      const topOffset = element.getBoundingClientRect().top + window.scrollY - 80;
       window.scrollTo({
         top: topOffset,
         behavior: "smooth",
@@ -148,7 +148,7 @@ export default function Navbar({ onBookClick }: NavbarProps) {
               </button>
               <a
                 href="tel:+917569979965"
-                className="inline-flex items-center gap-2 rounded-sm border border-secondary/35 bg-bg-charcoal/80 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-luxury-cream transition-all duration-200 hover:-translate-y-0.5 hover:border-secondary/70 hover:bg-secondary/10 hover:text-white"
+                className="inline-flex items-center gap-2 rounded-full border border-secondary/35 bg-bg-charcoal/80 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-luxury-cream transition-all duration-200 hover:-translate-y-0.5 hover:border-secondary/70 hover:bg-secondary/10 hover:text-white"
                 aria-label="Call Akshai Salon"
               >
                 <Phone className="w-3.5 h-3.5 text-secondary" />
@@ -156,7 +156,7 @@ export default function Navbar({ onBookClick }: NavbarProps) {
               </a>
               <button
                 onClick={onBookClick}
-                className="relative inline-flex items-center gap-2 bg-gradient-to-r from-primary to-secondary text-white text-xs lg:text-sm font-semibold tracking-wider uppercase px-5 py-2.5 rounded-sm hover:translate-y-[-1px] transition-all duration-200 cursor-pointer shadow-[0_4px_12px_rgba(166,58,58,0.3)] hover:shadow-[0_6px_16px_rgba(166,58,58,0.5)] border border-white/5 active:translate-y-[1px]"
+                className="relative inline-flex items-center gap-2 bg-gradient-to-r from-primary to-secondary text-white text-xs lg:text-sm font-semibold tracking-wider uppercase px-5 py-2.5 rounded-full hover:translate-y-[-1px] transition-all duration-200 cursor-pointer shadow-[0_4px_12px_rgba(166,58,58,0.3)] hover:shadow-[0_6px_16px_rgba(166,58,58,0.5)] border border-white/5 active:translate-y-[1px]"
                 id="cta-nav-book"
               >
                 <Calendar className="w-4 h-4" />
@@ -175,14 +175,14 @@ export default function Navbar({ onBookClick }: NavbarProps) {
               </button>
               <button
                 onClick={onBookClick}
-                className="bg-primary/20 text-secondary border border-primary/40 p-2 rounded-sm cursor-pointer active:scale-95 transition-transform"
+                className="bg-primary/20 text-secondary border border-primary/40 p-2 rounded-full cursor-pointer active:scale-95 transition-transform"
                 aria-label="Quick booking"
               >
                 <Calendar className="w-4 h-4" />
               </button>
               <button
                 onClick={() => setIsOpen(!isOpen)}
-                className="text-luxury-cream p-1.5 focus:outline-none focus:ring-1 focus:ring-primary/40 rounded-sm cursor-pointer"
+                className="text-luxury-cream p-1.5 focus:outline-none focus:ring-1 focus:ring-primary/40 rounded-full cursor-pointer"
                 aria-label={isOpen ? "Close menu" : "Open menu"}
               >
                 {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}

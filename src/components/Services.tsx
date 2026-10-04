@@ -114,12 +114,12 @@ export default function Services({ onServiceSelect }: ServicesProps) {
                   <div>
                     {/* Header: Icon & Duration info */}
                     <div className="flex items-center justify-between mb-4">
-                      <div className="h-10 w-10 rounded-sm bg-bg-charcoal group-hover:bg-primary/10 border border-white/5 group-hover:border-primary/35 flex items-center justify-center transition-all shadow-md">
+                      <div className="h-10 w-10 rounded-full bg-bg-charcoal group-hover:bg-primary/10 border border-white/5 group-hover:border-primary/35 flex items-center justify-center transition-all shadow-md">
                         {getServiceIcon(service.name, service.category)}
                       </div>
                       
                       {/* Estimated Duration */}
-                      <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-sm bg-bg-charcoal border border-white/5 font-mono text-[10px] text-accent font-semibold uppercase tracking-wider">
+                      <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-bg-charcoal border border-white/5 font-mono text-[10px] text-accent font-semibold uppercase tracking-wider">
                         <Clock className="w-3 h-3 text-secondary" />
                         {service.duration}
                       </div>
