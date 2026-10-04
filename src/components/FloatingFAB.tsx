@@ -2,7 +2,7 @@ import React from "react";
 import { MessageSquare, Phone, Instagram } from "lucide-react";
 
 export default function FloatingFAB() {
-  const whatsappUrl = "https://wa.me/917569979965?text=Hello%20Akshai%20Unisex%20Salon!%20I%20would%20like%20to%20inquire%20about%20your%20services%20and%20availabilities.";
+  const whatsappUrl = "https://wa.me/917569979965?text=Hello%20AM%20Unisex%20Salon!%20I%20would%20like%20to%20inquire%20about%20your%20services%20and%20availabilities.";
 
   return (
     <div className="fixed bottom-5 right-4 md:right-6 md:bottom-6 z-30 flex flex-col items-center gap-2.5 sm:gap-3">
@@ -25,7 +25,7 @@ export default function FloatingFAB() {
       <a
         href="tel:+917569979965"
         className="relative flex items-center justify-center h-12 w-12 rounded-full bg-bg-charcoal/90 border border-white/10 hover:border-primary/50 hover:bg-primary/10 text-white transition-all shadow-2xl hover:scale-105 active:scale-95 group"
-        aria-label="Call Akshai Salon reception directly"
+        aria-label="Call AM Salon reception directly"
       >
         {/* Soft custom warning pulse */}
         <div className="absolute inset-0 rounded-full bg-secondary/10 animate-ping opacity-75 pointer-events-none" />

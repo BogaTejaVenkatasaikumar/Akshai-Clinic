@@ -140,7 +140,7 @@ async function startServer() {
   }
 
   app.listen(PORT, "0.0.0.0", () => {
-    console.log(`Akshai Unisex Salon server running successfully on port ${PORT}`);
+    console.log(`AM Unisex Salon server running successfully on port ${PORT}`);
   });
 }
 

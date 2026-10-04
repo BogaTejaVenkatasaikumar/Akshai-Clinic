@@ -64,7 +64,7 @@ export default function About() {
               <div className="relative overflow-hidden shadow-2xl rounded-sm aspect-[4/5] bg-neutral-900 border border-white/10 group">
                 <img
                   src={LOCAL_ASSETS.salonInteriorMain}
-                  alt="Akshai Unisex Salon Main Lounge"
+                  alt="AM Unisex Salon Main Lounge"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   loading="lazy"
                   decoding="async"
@@ -116,11 +116,11 @@ export default function About() {
                 <Sparkle className="w-3 h-3 text-secondary" /> Estd. 2018 Pragathi Nagar
               </span>
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-white tracking-tight leading-none mb-6">
-                Why Clients Trust <span className="text-gradient">Akshai Unisex Salon</span>?
+                Why Clients Trust <span className="text-gradient">AM Unisex Salon</span>?
               </h2>
 
               <p className="text-sm md:text-base text-luxury-cream/70 font-body leading-relaxed mb-6 font-light">
-                Akshai Unisex Salon is one of Pragathi Nagar's most trusted family salons, providing premium beauty and grooming services for men, women and children. With a commitment to excellence, professional expertise and customer satisfaction, we have built a loyal client base that continues to grow every year.
+                AM Unisex Salon is one of Pragathi Nagar's most trusted family salons, providing premium beauty and grooming services for men, women and children. With a commitment to excellence, professional expertise and customer satisfaction, we have built a loyal client base that continues to grow every year.
               </p>
               <p className="text-sm md:text-base text-luxury-cream/70 font-body leading-relaxed mb-8 font-light">
                 Whether it's a structural haircut, organic hair spa, high-grade facial peel, party makeover, or bridal master services, our team ensures every guest enjoys a relaxing and luxurious salon experience.

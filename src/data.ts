@@ -264,8 +264,8 @@ export const SPECIAL_OFFERS: OfferItem[] = [
     id: "o1",
     title: "First-Time Guest Welcome Off",
     discount: "Flat 15% OFF",
-    description: "First time at Akshai? Enjoy flat savings across any hair highlight or premium global hair color.",
-    code: "WELCOMEAKSHAI",
+    description: "First time at AM Salon? Enjoy flat savings across any hair highlight or premium global hair color.",
+    code: "WELCOMEAM",
   },
   {
     id: "o2",
@@ -312,7 +312,7 @@ export const FAQS: FAQItem[] = [
   },
   {
     id: "f6",
-    question: "Is Akshai Unisex Salon a family-friendly salon?",
+    question: "Is AM Unisex Salon a family-friendly salon?",
     answer: "Absolutely! We are proud to operate a professional Unisex family environment with individual dedicated chairs and private facial chambers tailored for ladies, gentlemen, and kids.",
   },
 ];
@@ -339,7 +339,7 @@ export const TRANSFORMATIONS: TransformationItem[] = [
 export const GALLERY_ITEMS: GalleryItem[] = [
   {
     id: "g1",
-    title: "Akshai Unisex Salon Entrance",
+    title: "AM Unisex Salon Entrance",
     category: "interiors",
     imageUrl: LOCAL_ASSETS.salonEntranceSign,
   },

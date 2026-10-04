@@ -6,7 +6,7 @@ export default function SEOSchema() {
     const businessSchema = {
       "@context": "https://schema.org",
       "@type": "BeautySalon",
-      "name": "Akshai Unisex Salon",
+      "name": "AM Unisex Salon",
       "image": [
         "https://akshaiunisexsalon.com/images/reception-01.webp",
         "https://akshaiunisexsalon.com/images/salon-sign-01.webp"

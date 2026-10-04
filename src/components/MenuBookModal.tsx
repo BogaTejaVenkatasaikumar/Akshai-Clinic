@@ -216,7 +216,7 @@ export default function MenuBookModal({ isOpen, onClose }: MenuBookModalProps) {
   const touchStartX = useRef(0);
   const touchStartY = useRef(0);
 
-  // Total pages: Cover (0), Why Akshai (1), Categories (2..11), Closing (12)
+  // Total pages: Cover (0), Why AM Salon (1), Categories (2..11), Closing (12)
   const totalPages = 2 + categories.length + 1;
 
   useEffect(() => {
@@ -258,7 +258,7 @@ export default function MenuBookModal({ isOpen, onClose }: MenuBookModalProps) {
 
   const getPageTitle = (idx: number) => {
     if (idx === 0) return "Cover";
-    if (idx === 1) return "Why Akshai";
+    if (idx === 1) return "Why AM Salon";
     if (idx >= 2 && idx < 2 + categories.length) {
       return categories[idx - 2].title;
     }
@@ -302,9 +302,9 @@ export default function MenuBookModal({ isOpen, onClose }: MenuBookModalProps) {
             Unisex &middot; Unlimited &middot; Unstoppable
           </p>
           <div className="w-28 h-28 rounded-full border border-amber-400/50 p-1 mb-5 shadow-2xl">
-            <img src={akshaiLogo} alt="Akshai Unisex Salon logo" className="w-full h-full rounded-full object-cover" />
+            <img src={akshaiLogo} alt="AM Unisex Salon logo" className="w-full h-full rounded-full object-cover" />
           </div>
-          <h1 className="font-serif text-4xl text-amber-400 tracking-wider mb-1">AKSHAI</h1>
+          <h1 className="font-serif text-4xl text-amber-400 tracking-wider mb-1">AM</h1>
           <h2 className="font-serif text-2xl tracking-[0.3em] text-cream mb-3">SALON</h2>
           <div className="w-14 h-[1px] bg-amber-400/40 my-3" />
           <p className="font-serif italic text-base text-cream-dim mb-6">The Service Edit</p>
@@ -328,7 +328,7 @@ export default function MenuBookModal({ isOpen, onClose }: MenuBookModalProps) {
           <div className="flex items-start gap-3 mb-4">
             <span className="font-serif text-3xl font-light text-amber-400/30">&bull;</span>
             <div>
-              <p className="text-[9.5px] tracking-[0.3em] uppercase text-amber-400">Why Akshai</p>
+              <p className="text-[9.5px] tracking-[0.3em] uppercase text-amber-400">Why AM Salon</p>
               <h2 className="font-serif text-2xl font-bold text-cream">The Difference</h2>
             </div>
           </div>
@@ -456,7 +456,7 @@ export default function MenuBookModal({ isOpen, onClose }: MenuBookModalProps) {
         <div className="border border-amber-400/30 p-3.5 rounded-sm mb-4 bg-amber-400/5">
           <h3 className="font-serif text-base font-semibold text-cream mb-1">Save 15% on every visit</h3>
           <p className="text-xs text-cream-dim leading-relaxed mb-3">
-            Ask our reception desk to enroll in the Akshai VIP membership and enjoy discounted rates all year round.
+            Ask our reception desk to enroll in the AM VIP membership and enjoy discounted rates all year round.
           </p>
           <a
             href="tel:+917569979965"
@@ -468,7 +468,7 @@ export default function MenuBookModal({ isOpen, onClose }: MenuBookModalProps) {
 
         <div className="mb-4 text-xs">
           <p className="text-[9px] tracking-widest uppercase text-cream-dim mb-1">Find Us</p>
-          <p className="text-cream font-medium">Akshai Unisex Salon</p>
+          <p className="text-cream font-medium">AM Unisex Salon</p>
           <p className="text-cream-dim text-[11px] leading-relaxed">
             Near Shiva Medicals, 3rd Layout, Pragathi Nagar, Hyderabad, Telangana 500090
           </p>
@@ -493,7 +493,7 @@ export default function MenuBookModal({ isOpen, onClose }: MenuBookModalProps) {
               <span>Call Us Directly</span>
             </a>
             <a
-              href="https://wa.me/917569979965?text=Hello%20Akshai%20Unisex%20Salon!%20I%20would%20like%20to%20inquire%20about%20your%20services."
+              href="https://wa.me/917569979965?text=Hello%20AM%20Unisex%20Salon!%20I%20would%20like%20to%20inquire%20about%20your%20services."
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center gap-1.5 py-2 px-3 rounded-full border border-[#25D366]/40 text-white bg-[#25D366]/20 hover:bg-[#25D366]/30 transition-colors"
@@ -505,7 +505,7 @@ export default function MenuBookModal({ isOpen, onClose }: MenuBookModalProps) {
         </div>
 
         <div className="mt-auto pt-3 border-t border-cream/10 text-[8.5px] uppercase tracking-wider text-cream-dim/60 text-center leading-relaxed">
-          Akshai Unisex Salon &middot; Est. 2018<br />
+          AM Unisex Salon &middot; Est. 2018<br />
           Open All 7 Days &middot; 9:00 AM - 9:00 PM
         </div>
       </div>

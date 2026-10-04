@@ -104,7 +104,7 @@ export default function Navbar({ onBookClick }: NavbarProps) {
                 handleLinkClick("#home", "home");
               }}
               className="flex items-center gap-1 focus:outline-none"
-              aria-label="Akshai Unisex Salon Home"
+              aria-label="AM Unisex Salon Home"
             >
               <Logo size="sm" />
             </a>
@@ -159,7 +159,7 @@ export default function Navbar({ onBookClick }: NavbarProps) {
               <a
                 href="tel:+917569979965"
                 className="inline-flex items-center gap-2 rounded-sm border border-secondary/35 bg-bg-charcoal/80 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-luxury-cream transition-all duration-200 hover:-translate-y-0.5 hover:border-secondary/70 hover:bg-secondary/10 hover:text-white"
-                aria-label="Call Akshai Salon"
+                aria-label="Call AM Salon"
               >
                 <Phone className="w-3.5 h-3.5 text-secondary" />
                 Call

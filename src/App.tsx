@@ -68,7 +68,7 @@ export default function App() {
             {/* High-level Achievements Counters */}
             <Stats />
 
-            {/* Narrative Context of Akshai */}
+            {/* Narrative Context of AM Salon */}
             <About />
 
             {/* Catalog Grid Switcher */}

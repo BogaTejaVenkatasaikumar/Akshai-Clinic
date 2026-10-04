@@ -22,7 +22,7 @@ export default function Hero({ onBookClick }: HeroProps) {
     {
       image: LOCAL_ASSETS.salonInteriorMain,
       title: "Elevate Your Style",
-      label: "AKSHAI UNISEX SALON",
+      label: "AM UNISEX SALON",
       subTitle:
         "Experience Pragathi Nagar's ultimate luxury destination for complete beauty transformations.",
     },
@@ -52,7 +52,7 @@ export default function Hero({ onBookClick }: HeroProps) {
   }, [slides.length]);
 
   const whatsappUrl = `https://wa.me/917569979965?text=${encodeURIComponent(
-    "Hello Akshai Unisex Salon, I would like to quickly inquire about your hair and grooming services."
+    "Hello AM Unisex Salon, I would like to quickly inquire about your hair and grooming services."
   )}`;
 
   return (

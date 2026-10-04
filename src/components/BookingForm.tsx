@@ -94,7 +94,7 @@ export default function BookingForm({ selectedService, onClearService }: Booking
       });
 
       // Assemble WhatsApp Redirect link
-      const textMessage = `Hello Akshai Unisex Salon,\n\nName: ${formData.name}\nPhone: ${formData.phone}\nService: ${formData.service}\nPreferred Date: ${formData.date}\nPreferred Time: ${formData.time}\nNotes: ${formData.notes || "None"}\n\nI would like to book an appointment.`;
+      const textMessage = `Hello AM Unisex Salon,\n\nName: ${formData.name}\nPhone: ${formData.phone}\nService: ${formData.service}\nPreferred Date: ${formData.date}\nPreferred Time: ${formData.time}\nNotes: ${formData.notes || "None"}\n\nI would like to book an appointment.`;
       const whatsappUrl = `https://wa.me/917569979965?text=${encodeURIComponent(textMessage)}`;
 
       // Reset local inputs
@@ -144,7 +144,7 @@ export default function BookingForm({ selectedService, onClearService }: Booking
             <div className="flex flex-col sm:flex-row lg:flex-col gap-4">
               
               <a
-                href="https://wa.me/917569979965?text=Hello%20Akshai%20Unisex%20Salon!%20I%20would%20like%20to%20inquire%20about%20booking%20an%20appointment."
+                href="https://wa.me/917569979965?text=Hello%20AM%20Unisex%20Salon!%20I%20would%20like%20to%20inquire%20about%20booking%20an%20appointment."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-4 p-4 rounded-sm bg-bg-charcoal border border-white/5 hover:border-[#25D366]/40 hover:bg-bg-charcoal/95 group transition-all"
@@ -461,7 +461,7 @@ export default function BookingForm({ selectedService, onClearService }: Booking
 
               <button
                 onClick={() => {
-                  const textMessage = `Hello Akshai Unisex Salon,\n\nName: ${successData.name}\nPhone: ${successData.phone}\nService: ${successData.service}\nPreferred Date: ${successData.date}\nPreferred Time: ${successData.time}\nNotes: ${successData.notes || "None"}\n\nI would like to book an appointment.`;
+                  const textMessage = `Hello AM Unisex Salon,\n\nName: ${successData.name}\nPhone: ${successData.phone}\nService: ${successData.service}\nPreferred Date: ${successData.date}\nPreferred Time: ${successData.time}\nNotes: ${successData.notes || "None"}\n\nI would like to book an appointment.`;
                   window.open(`https://wa.me/917569979965?text=${encodeURIComponent(textMessage)}`, "_blank");
                   setSuccessData(null);
                 }}

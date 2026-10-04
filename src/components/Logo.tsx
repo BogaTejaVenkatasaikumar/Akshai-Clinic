@@ -27,7 +27,7 @@ export default function Logo({ className = "", size = "md" }: LogoProps) {
         <span className="absolute -inset-1 rounded-full bg-gradient-to-br from-secondary/35 via-accent/20 to-primary/30 blur-md opacity-80" />
         <img
           src={akshaiLogo}
-          alt="Akshai Unisex Salon logo"
+          alt="AM Unisex Salon logo"
           className="relative h-full w-full rounded-full object-cover ring-1 ring-secondary/55 shadow-[0_8px_28px_rgba(8,7,6,0.55)]"
           loading={size === "xl" ? "eager" : "lazy"}
         />
@@ -36,7 +36,7 @@ export default function Logo({ className = "", size = "md" }: LogoProps) {
       {size !== "sm" && (
         <div className="flex flex-col">
           <span className={`font-display font-bold tracking-wider leading-none text-luxury-cream ${textSizes[size]}`}>
-            AKSHAI
+            AM SALON
           </span>
           <span className="text-[9px] md:text-[10px] tracking-widest font-body text-secondary font-semibold flex items-center gap-1 uppercase">
             <span className="w-1 h-1 bg-secondary rounded-full inline-block"></span>
