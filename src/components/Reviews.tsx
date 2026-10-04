@@ -43,7 +43,7 @@ export default function Reviews() {
             </p>
 
             {/* Overall Rating card */}
-            <div className="inline-flex flex-col items-center lg:items-start p-6 rounded-full bg-bg-charcoal border border-white/5 shadow-2xl relative">
+            <div className="inline-flex flex-col items-center lg:items-start p-6 rounded-sm bg-bg-charcoal border border-white/5 shadow-2xl relative">
               <div className="flex items-center gap-1 mb-2">
                 {[1, 2, 3, 4, 5].map((s) => (
                   <Star key={s} className="w-5 h-5 text-amber-500 fill-amber-500" />

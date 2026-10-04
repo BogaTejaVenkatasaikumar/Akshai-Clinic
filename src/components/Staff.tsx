@@ -35,7 +35,7 @@ export default function Staff() {
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: idx * 0.15, ease: "easeOut" }}
-              className="group relative rounded-full bg-bg-charcoal border border-white/5 hover:border-primary/40 overflow-hidden shadow-2xl transition-all hover:translate-y-[-4px] flex flex-col justify-between"
+              className="group relative rounded-sm bg-bg-charcoal border border-white/5 hover:border-primary/40 overflow-hidden shadow-2xl transition-all hover:translate-y-[-4px] flex flex-col justify-between"
             >
               {/* Profile Image container */}
               <div className="relative aspect-[4/5] w-full overflow-hidden bg-neutral-900 border-b border-white/5">
@@ -51,7 +51,7 @@ export default function Staff() {
                 <div className="absolute inset-0 bg-gradient-to-t from-bg-charcoal via-bg-charcoal/15 to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />
 
                 {/* Experience Badge floating on image */}
-                <div className="absolute top-4 right-4 bg-primary/90 backdrop-blur-sm border border-white/10 px-3 py-1.5 rounded-full">
+                <div className="absolute top-4 right-4 bg-primary/90 backdrop-blur-sm border border-white/10 px-3 py-1.5 rounded-sm">
                   <p className="text-[10px] font-bold tracking-widest text-luxury-cream uppercase font-body flex items-center gap-1">
                     <Scissors className="w-3 h-3 text-secondary" />
                     {stylist.experience.split(" ")[0]} Year Pro

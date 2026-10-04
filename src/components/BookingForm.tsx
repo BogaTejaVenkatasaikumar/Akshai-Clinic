@@ -147,7 +147,7 @@ export default function BookingForm({ selectedService, onClearService }: Booking
                 href="https://wa.me/917569979965?text=Hello%20Akshai%20Unisex%20Salon!%20I%20would%20like%20to%20inquire%20about%20booking%20an%20appointment."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-4 p-4 rounded-full bg-bg-charcoal border border-white/5 hover:border-[#25D366]/40 hover:bg-bg-charcoal/95 group transition-all"
+                className="flex items-center gap-4 p-4 rounded-sm bg-bg-charcoal border border-white/5 hover:border-[#25D366]/40 hover:bg-bg-charcoal/95 group transition-all"
               >
                 <div className="h-10 w-10 rounded-full bg-[#1e4620]/20 flex items-center justify-center text-[#25D366] shrink-0">
                   <MessageSquare className="w-5 h-5 text-[#25D366] fill-[#25D366]/10" />
@@ -160,7 +160,7 @@ export default function BookingForm({ selectedService, onClearService }: Booking
 
               <a
                 href="tel:+917569979965"
-                className="flex items-center gap-4 p-4 rounded-full bg-bg-charcoal border border-white/5 hover:border-primary/40 hover:bg-bg-charcoal/95 group transition-all"
+                className="flex items-center gap-4 p-4 rounded-sm bg-bg-charcoal border border-white/5 hover:border-primary/40 hover:bg-bg-charcoal/95 group transition-all"
               >
                 <div className="h-10 w-10 rounded-full bg-[#3d1a1e]/20 flex items-center justify-center text-secondary shrink-0">
                   <Phone className="w-5 h-5 text-secondary" />
@@ -175,7 +175,7 @@ export default function BookingForm({ selectedService, onClearService }: Booking
                 href="https://www.instagram.com/akshaiunisexsalonpragathinagar"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-4 p-4 rounded-full bg-bg-charcoal border border-white/5 hover:border-slate-500/40 hover:bg-bg-charcoal/95 group transition-all"
+                className="flex items-center gap-4 p-4 rounded-sm bg-bg-charcoal border border-white/5 hover:border-slate-500/40 hover:bg-bg-charcoal/95 group transition-all"
               >
                 <div className="h-10 w-10 rounded-full bg-slate-500/10 flex items-center justify-center text-white shrink-0">
                   <Instagram className="w-5 h-5 text-purple-400" />
@@ -208,7 +208,7 @@ export default function BookingForm({ selectedService, onClearService }: Booking
                 
                 {/* Error Banner */}
                 {errorMsg && (
-                  <div className="p-4 bg-primary/20 border border-primary/45 rounded-full text-xs text-secondary font-body font-semibold">
+                  <div className="p-4 bg-primary/20 border border-primary/45 rounded-sm text-xs text-secondary font-body font-semibold">
                     {errorMsg}
                   </div>
                 )}
@@ -228,7 +228,7 @@ export default function BookingForm({ selectedService, onClearService }: Booking
                         onChange={handleInputChange}
                         required
                         placeholder="John Doe"
-                        className="w-full pl-10 pr-4 py-3.5 rounded-full bg-bg-dark border border-white/5 text-sm text-white placeholder-luxury-cream/25 focus:outline-none focus:ring-1 focus:ring-primary/40 focus:border-primary/40 transition-all font-body font-light"
+                        className="w-full pl-10 pr-4 py-3.5 rounded-sm bg-bg-dark border border-white/5 text-sm text-white placeholder-luxury-cream/25 focus:outline-none focus:ring-1 focus:ring-primary/40 focus:border-primary/40 transition-all font-body font-light"
                       />
                     </div>
                   </div>
@@ -247,7 +247,7 @@ export default function BookingForm({ selectedService, onClearService }: Booking
                         onChange={handleInputChange}
                         required
                         placeholder="75699 79965"
-                        className="w-full pl-10 pr-4 py-3.5 rounded-full bg-bg-dark border border-white/5 text-sm text-white placeholder-luxury-cream/25 focus:outline-none focus:ring-1 focus:ring-primary/40 focus:border-primary/40 transition-all font-body font-light"
+                        className="w-full pl-10 pr-4 py-3.5 rounded-sm bg-bg-dark border border-white/5 text-sm text-white placeholder-luxury-cream/25 focus:outline-none focus:ring-1 focus:ring-primary/40 focus:border-primary/40 transition-all font-body font-light"
                       />
                     </div>
                   </div>
@@ -279,7 +279,7 @@ export default function BookingForm({ selectedService, onClearService }: Booking
                       value={formData.service}
                       onChange={handleInputChange}
                       required
-                      className="w-full pl-10 pr-4 py-3.5 rounded-full bg-bg-dark border border-white/5 text-sm text-luxury-cream focus:outline-none focus:ring-1 focus:ring-primary/40 focus:border-primary/40 transition-all font-body font-light appearance-none"
+                      className="w-full pl-10 pr-4 py-3.5 rounded-sm bg-bg-dark border border-white/5 text-sm text-luxury-cream focus:outline-none focus:ring-1 focus:ring-primary/40 focus:border-primary/40 transition-all font-body font-light appearance-none"
                     >
                       <option value="">-- Choose a Luxury Treatment --</option>
                       
@@ -332,7 +332,7 @@ export default function BookingForm({ selectedService, onClearService }: Booking
                         onChange={handleInputChange}
                         required
                         min={new Date().toISOString().split("T")[0]}
-                        className="w-full pl-10 pr-4 py-3.5 rounded-full bg-bg-dark border border-white/5 text-sm text-white focus:outline-none focus:ring-1 focus:ring-primary/40 focus:border-primary/40 transition-all font-body font-light"
+                        className="w-full pl-10 pr-4 py-3.5 rounded-sm bg-bg-dark border border-white/5 text-sm text-white focus:outline-none focus:ring-1 focus:ring-primary/40 focus:border-primary/40 transition-all font-body font-light"
                       />
                     </div>
                   </div>
@@ -349,7 +349,7 @@ export default function BookingForm({ selectedService, onClearService }: Booking
                         value={formData.time}
                         onChange={handleInputChange}
                         required
-                        className="w-full pl-10 pr-4 py-3.5 rounded-full bg-bg-dark border border-white/5 text-sm text-luxury-cream focus:outline-none focus:ring-1 focus:ring-primary/40 focus:border-primary/40 transition-all font-body font-light appearance-none"
+                        className="w-full pl-10 pr-4 py-3.5 rounded-sm bg-bg-dark border border-white/5 text-sm text-luxury-cream focus:outline-none focus:ring-1 focus:ring-primary/40 focus:border-primary/40 transition-all font-body font-light appearance-none"
                       >
                         <option value="">-- Choose Slot --</option>
                         {hourlySlots.map((slot) => (
@@ -373,7 +373,7 @@ export default function BookingForm({ selectedService, onClearService }: Booking
                       onChange={handleInputChange}
                       placeholder="Specify if you have specialized locks requests, allergies or favor a certain senior treatment stylist..."
                       rows={3}
-                      className="w-full pl-10 pr-4 py-3.5 rounded-full bg-bg-dark border border-white/5 text-sm text-white placeholder-luxury-cream/25 focus:outline-none focus:ring-1 focus:ring-primary/40 transition-all font-body font-light resize-none"
+                      className="w-full pl-10 pr-4 py-3.5 rounded-sm bg-bg-dark border border-white/5 text-sm text-white placeholder-luxury-cream/25 focus:outline-none focus:ring-1 focus:ring-primary/40 transition-all font-body font-light resize-none"
                     />
                   </div>
                 </div>
@@ -382,7 +382,7 @@ export default function BookingForm({ selectedService, onClearService }: Booking
                 <button
                   type="submit"
                   disabled={loading}
-                  className="w-full rounded-full bg-gradient-to-r from-primary to-secondary text-white font-semibold py-4 text-xs md:text-sm tracking-widest uppercase flex items-center justify-center gap-2 hover:translate-y-[-1px] transition-all duration-300 shadow-lg select-none cursor-pointer active:translate-y-[1px]"
+                  className="w-full rounded-sm bg-gradient-to-r from-primary to-secondary text-white font-semibold py-4 text-xs md:text-sm tracking-widest uppercase flex items-center justify-center gap-2 hover:translate-y-[-1px] transition-all duration-300 shadow-lg select-none cursor-pointer active:translate-y-[1px]"
                 >
                   {loading ? (
                     <>
@@ -456,7 +456,7 @@ export default function BookingForm({ selectedService, onClearService }: Booking
                   window.open(`https://wa.me/917569979965?text=${encodeURIComponent(textMessage)}`, "_blank");
                   setSuccessData(null);
                 }}
-                className="w-full py-4 text-xs tracking-wider uppercase font-bold text-white bg-gradient-to-r from-primary to-secondary rounded-full hover:-translate-y-0.5 active:translate-y-0 shadow-lg cursor-pointer flex items-center justify-center gap-2"
+                className="w-full py-4 text-xs tracking-wider uppercase font-bold text-white bg-gradient-to-r from-primary to-secondary rounded-sm hover:-translate-y-0.5 active:translate-y-0 shadow-lg cursor-pointer flex items-center justify-center gap-2"
               >
                 <MessageSquare className="w-4 h-4 text-white fill-white/10" />
                 Manually Open WhatsApp Chat

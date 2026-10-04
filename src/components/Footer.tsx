@@ -162,7 +162,7 @@ export default function Footer() {
             </div>
 
             {/* Google Map Mini Embed */}
-            <div className="w-full h-32 rounded-full overflow-hidden border border-white/5 bg-bg-charcoal group shadow-inner relative">
+            <div className="w-full h-32 rounded-sm overflow-hidden border border-white/5 bg-bg-charcoal group shadow-inner relative">
               <iframe
                 title="Akshai Unisex Salon Google Map Location Map"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3804.8105574518427!2d78.3892702!3d17.5165991!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb91c53e8e2d45%3A0xc3b8a3db4cf8dd77!2sAkshai%20Unisex%20Salon!5e0!3m2!1sen!2sin!4v1700000000000"

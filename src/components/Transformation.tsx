@@ -89,14 +89,14 @@ export default function Transformation() {
                     setActiveIndex(index);
                     setSliderPosition(50); // reset slider to middle
                   }}
-                  className={`w-full text-left p-4 rounded-full border transition-all duration-300 flex items-center justify-between cursor-pointer ${
+                  className={`w-full text-left p-4 rounded-sm border transition-all duration-300 flex items-center justify-between cursor-pointer ${
                     activeIndex === index
                       ? "bg-bg-charcoal border-primary text-white"
                       : "bg-bg-charcoal/30 border-white/5 text-luxury-cream/60 hover:text-white"
                   }`}
                 >
                   <div className="flex items-center gap-3">
-                    <div className={`h-8 w-8 rounded-full flex items-center justify-center text-xs font-semibold ${
+                    <div className={`h-8 w-8 rounded-sm flex items-center justify-center text-xs font-semibold ${
                       activeIndex === index
                         ? "bg-gradient-to-r from-primary to-secondary text-white"
                         : "bg-bg-dark text-accent"
@@ -118,7 +118,7 @@ export default function Transformation() {
           <div className="lg:col-span-7 flex flex-col items-center">
             
             <div className="text-center mb-6">
-              <span className="text-[10px] md:text-xs font-mono font-bold uppercase tracking-widest text-accent bg-bg-charcoal/60 px-3 py-1.5 rounded-full border border-white/5 inline-flex items-center gap-1">
+              <span className="text-[10px] md:text-xs font-mono font-bold uppercase tracking-widest text-accent bg-bg-charcoal/60 px-3 py-1.5 rounded-sm border border-white/5 inline-flex items-center gap-1">
                 <MoveLeft className="w-3.5 h-3.5 text-secondary" />
                 Drag Slide Handle Left & Right
                 <MoveRight className="w-3.5 h-3.5 text-secondary" />
@@ -136,7 +136,7 @@ export default function Transformation() {
               }}
               onMouseDown={handleStartDragging}
               onTouchStart={handleStartDragging}
-              className="relative w-full max-w-[550px] aspect-[4/3] rounded-full overflow-hidden border border-white/10 shadow-2xl cursor-ew-resize select-none bg-neutral-900"
+              className="relative w-full max-w-[550px] aspect-[4/3] rounded-sm overflow-hidden border border-white/10 shadow-2xl cursor-ew-resize select-none bg-neutral-900"
             >
               {/* BEFORE IMAGE (Full size static layer) */}
               <img
@@ -146,7 +146,7 @@ export default function Transformation() {
                 loading="lazy"
                 decoding="async"
               />
-              <div className="absolute top-4 left-4 bg-bg-dark/70 backdrop-blur-sm border border-white/10 px-3 py-1 text-[10px] font-bold tracking-widest uppercase text-white rounded-full">
+              <div className="absolute top-4 left-4 bg-bg-dark/70 backdrop-blur-sm border border-white/10 px-3 py-1 text-[10px] font-bold tracking-widest uppercase text-white rounded-sm">
                 BEFORE
               </div>
 
@@ -163,7 +163,7 @@ export default function Transformation() {
                   loading="lazy"
                   decoding="async"
                 />
-                <div className="absolute top-4 right-4 bg-primary/80 backdrop-blur-sm border border-white/10 px-3 py-1 text-[10px] font-bold tracking-widest uppercase text-luxury-cream rounded-full">
+                <div className="absolute top-4 right-4 bg-primary/80 backdrop-blur-sm border border-white/10 px-3 py-1 text-[10px] font-bold tracking-widest uppercase text-luxury-cream rounded-sm">
                   AFTER
                 </div>
               </div>
