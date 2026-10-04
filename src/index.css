@@ -23,8 +23,8 @@
   --color-luxury-cream: var(--theme-luxury-cream);
   --color-white: var(--theme-white);
 
-  --font-display: "Cinzel", serif;
-  --font-body: "Manrope", sans-serif;
+  --font-display: "Recoleta", serif;
+  --font-body: "Berthold", sans-serif;
 
   --animate-pulse-slow: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
   --animate-float: float 4s ease-in-out infinite;
