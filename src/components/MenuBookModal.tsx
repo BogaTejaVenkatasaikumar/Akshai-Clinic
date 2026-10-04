@@ -267,22 +267,22 @@ export default function MenuBookModal({ isOpen, onClose }: MenuBookModalProps) {
 
   const renderRow = (svc: ServiceItemData, colCount: number) => {
     return (
-      <div key={svc.name} className="flex items-baseline gap-2.5 py-1.5 border-b border-cream/5 text-xs">
-        <div className="flex items-center gap-1.5 shrink-0">
-          <span className="text-cream text-[13px] font-light whitespace-nowrap">{svc.name}</span>
+      <div key={svc.name} className="flex items-baseline gap-2 py-1.5 border-b border-cream/5 text-xs">
+        <div className="flex items-center gap-1.5 shrink-0 max-w-[58%]">
+          <span className="text-cream text-xs sm:text-[13px] font-light truncate">{svc.name}</span>
           {svc.tag && (
-            <span className="text-[7.5px] tracking-wider uppercase text-amber-500 bg-amber-400/10 border border-amber-400/40 px-1.5 py-0.5 rounded-sm whitespace-nowrap">
+            <span className="text-[7px] tracking-wider uppercase text-amber-500 bg-amber-400/10 border border-amber-400/40 px-1 py-0.5 rounded-sm whitespace-nowrap">
               {svc.tag}
             </span>
           )}
         </div>
-        <div className="flex-1 border-b border-dotted border-cream/20 mb-1 min-w-[10px]" />
-        <div className="flex gap-3.5 shrink-0">
+        <div className="flex-1 border-b border-dotted border-cream/20 mb-1 min-w-[8px]" />
+        <div className="flex gap-2 sm:gap-3.5 shrink-0">
           {svc.prices.map((p, i) => (
             <span
               key={i}
-              className={`min-w-[42px] text-right ${
-                i === 0 ? "text-amber-400 font-semibold text-[13px]" : "text-cream-dim text-[11px] font-light"
+              className={`min-w-[36px] sm:min-w-[42px] text-right ${
+                i === 0 ? "text-amber-400 font-semibold text-xs sm:text-[13px]" : "text-cream-dim text-[10px] sm:text-[11px] font-light"
               }`}
             >
               {p}
@@ -483,19 +483,23 @@ export default function MenuBookModal({ isOpen, onClose }: MenuBookModalProps) {
         </div>
 
         <div className="text-center my-2 p-3 bg-white/5 rounded-sm border border-white/5">
-          <p className="text-[9px] uppercase tracking-widest text-amber-400 mb-1">Direct Booking</p>
-          <div className="flex justify-center gap-4 text-xs font-semibold">
-            <a href="tel:+917569979965" className="text-cream hover:text-amber-400 flex items-center gap-1">
-              <Phone className="w-3 h-3 text-amber-400" /> +91 7569979965
-            </a>
-            <span className="text-cream/20">|</span>
+          <p className="text-[9px] uppercase tracking-widest text-amber-400 mb-2">Connect With Us</p>
+          <div className="flex flex-col sm:flex-row justify-center gap-2 sm:gap-3 text-xs font-semibold">
             <a
-              href="https://wa.me/917569979965"
+              href="tel:+917569979965"
+              className="flex items-center justify-center gap-1.5 py-2 px-3 rounded-full border border-amber-400/40 text-cream hover:text-amber-400 hover:bg-amber-400/10 transition-colors"
+            >
+              <Phone className="w-3.5 h-3.5 text-amber-400" />
+              <span>Call Us Directly</span>
+            </a>
+            <a
+              href="https://wa.me/917569979965?text=Hello%20Akshai%20Unisex%20Salon!%20I%20would%20like%20to%20inquire%20about%20your%20services."
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[#25D366] hover:underline flex items-center gap-1"
+              className="flex items-center justify-center gap-1.5 py-2 px-3 rounded-full border border-[#25D366]/40 text-white bg-[#25D366]/20 hover:bg-[#25D366]/30 transition-colors"
             >
-              <MessageSquare className="w-3 h-3 text-[#25D366]" /> WhatsApp
+              <MessageSquare className="w-3.5 h-3.5 text-[#25D366]" />
+              <span>Chat on WhatsApp</span>
             </a>
           </div>
         </div>
@@ -509,30 +513,37 @@ export default function MenuBookModal({ isOpen, onClose }: MenuBookModalProps) {
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-black/80 backdrop-blur-md animate-fadeIn">
-      {/* Container Card */}
-      <div className="relative w-full max-w-[460px] bg-[#121012] border border-amber-400/20 rounded-xl shadow-2xl overflow-hidden flex flex-col items-center">
-        
-        {/* Top bar with close button & title */}
-        <div className="w-full flex items-center justify-between px-5 py-3 border-b border-cream/10 bg-[#161316]">
+    <div
+      className="fixed inset-0 z-50 flex items-center justify-center p-2.5 sm:p-4 bg-black/85 backdrop-blur-md animate-fadeIn"
+      onClick={onClose}
+    >
+      {/* Container Card — responsive height & width */}
+      <div
+        className="relative w-full max-w-[480px] h-[90vh] sm:h-[620px] max-h-[720px] bg-[#121012] border border-amber-400/25 rounded-2xl shadow-2xl overflow-hidden flex flex-col"
+        onClick={(e) => e.stopPropagation()}
+      >
+
+        {/* Top bar */}
+        <div className="w-full flex items-center justify-between px-4 py-3 border-b border-cream/10 bg-[#161316] shrink-0">
           <div className="flex items-center gap-2">
             <BookOpen className="w-4 h-4 text-amber-400" />
-            <span className="text-xs uppercase font-serif tracking-[0.25em] text-cream font-medium">
+            <span className="text-xs uppercase font-serif tracking-[0.2em] text-cream font-medium truncate max-w-[200px]">
               Menu Card &middot; {getPageTitle(currentPage)}
             </span>
           </div>
           <button
             onClick={onClose}
-            className="p-1 rounded-full text-cream-dim hover:text-white hover:bg-white/10 transition-colors"
+            className="p-1.5 rounded-full text-cream-dim hover:text-white hover:bg-white/10 transition-colors shrink-0"
             aria-label="Close Menu Card"
           >
             <X className="w-5 h-5" />
           </button>
         </div>
 
-        {/* The Flipbook Body */}
+        {/* The Flipbook Body — flex-1 so it fills remaining space */}
         <div
-          className="relative w-full h-[540px] overflow-hidden"
+          className="relative w-full flex-1 overflow-hidden"
+          style={{ minHeight: 0 }}
           onTouchStart={(e) => {
             touchStartX.current = e.touches[0].clientX;
             touchStartY.current = e.touches[0].clientY;
@@ -553,7 +564,7 @@ export default function MenuBookModal({ isOpen, onClose }: MenuBookModalProps) {
 
           {/* Single page — slides out then new page slides in */}
           <div
-            className="absolute inset-0 bg-[#121012] overflow-hidden"
+            className="absolute inset-0 bg-[#121012] overflow-y-auto scrollbar-none"
             style={{
               transition: "opacity 200ms ease, transform 200ms ease",
               opacity: visible ? 1 : 0,

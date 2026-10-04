@@ -253,7 +253,7 @@ export default function Navbar({ onBookClick }: NavbarProps) {
                   className="flex items-center justify-center gap-2 font-body text-sm font-semibold text-luxury-cream/90 bg-white/5 py-3 rounded-md hover:bg-white/10"
                 >
                   <Phone className="w-4 h-4 text-secondary" />
-                  Call: +91 7569979965
+                  Call Us
                 </a>
                 <button
                   onClick={() => {

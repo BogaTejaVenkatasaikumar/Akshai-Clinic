@@ -147,14 +147,14 @@ export default function Footer() {
                   </p>
                 </div>
                 
-                <div className="flex items-center gap-2">
-                  <Phone className="w-4 h-4 text-accent" />
-                  <div className="flex flex-col">
-                    <a href="tel:+917569979965" className="hover:text-secondary font-bold font-mono">
-                      Main Phone: +91 7569979965
+                <div className="flex items-center gap-3">
+                  <Phone className="w-4 h-4 text-accent shrink-0" />
+                  <div className="flex flex-col gap-1">
+                    <a href="tel:+917569979965" className="hover:text-secondary font-semibold font-body text-xs text-luxury-cream">
+                      Call Salon Reception
                     </a>
-                    <a href="tel:+911205244740" className="hover:text-secondary text-[11px] font-mono">
-                      Alt Phone: +91 1205244740
+                    <a href="https://wa.me/917569979965" target="_blank" rel="noopener noreferrer" className="text-[#25D366] hover:underline text-xs flex items-center gap-1 font-body">
+                      Chat on WhatsApp
                     </a>
                   </div>
                 </div>

@@ -58,7 +58,7 @@ export default function Hero({ onBookClick }: HeroProps) {
   return (
     <section
       id="home"
-      className="relative min-h-[760px] h-[100svh] w-full bg-bg-dark overflow-hidden"
+      className="relative min-h-[620px] sm:min-h-[700px] h-[100svh] w-full bg-bg-dark overflow-hidden"
     >
       <div className="absolute inset-0">
         <AnimatePresence mode="wait">

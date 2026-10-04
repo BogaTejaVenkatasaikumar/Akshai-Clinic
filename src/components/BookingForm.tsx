@@ -152,10 +152,7 @@ export default function BookingForm({ selectedService, onClearService }: Booking
                 <div className="h-10 w-10 rounded-full bg-[#1e4620]/20 flex items-center justify-center text-[#25D366] shrink-0">
                   <MessageSquare className="w-5 h-5 text-[#25D366] fill-[#25D366]/10" />
                 </div>
-                <div className="text-left">
-                  <h4 className="text-xs uppercase tracking-wider font-bold text-white font-body">WhatsApp Master Desk</h4>
-                  <p className="text-xs text-luxury-cream/50">+91 7569979965 (Direct Chat)</p>
-                </div>
+                <h4 className="text-xs uppercase tracking-wider font-bold text-white font-body">Chat on WhatsApp</h4>
               </a>
 
               <a
@@ -165,10 +162,7 @@ export default function BookingForm({ selectedService, onClearService }: Booking
                 <div className="h-10 w-10 rounded-full bg-[#3d1a1e]/20 flex items-center justify-center text-secondary shrink-0">
                   <Phone className="w-5 h-5 text-secondary" />
                 </div>
-                <div className="text-left">
-                  <h4 className="text-xs uppercase tracking-wider font-bold text-white font-body">Direct Call Desk</h4>
-                  <p className="text-xs text-secondary font-semibold font-mono">Speak with our team</p>
-                </div>
+                <h4 className="text-xs uppercase tracking-wider font-bold text-white font-body">Call Us Directly</h4>
               </a>
 
               <a
@@ -180,10 +174,7 @@ export default function BookingForm({ selectedService, onClearService }: Booking
                 <div className="h-10 w-10 rounded-full bg-slate-500/10 flex items-center justify-center text-white shrink-0">
                   <Instagram className="w-5 h-5 text-purple-400" />
                 </div>
-                <div className="text-left">
-                  <h4 className="text-xs uppercase tracking-wider font-bold text-white font-body">Instagram updates</h4>
-                  <p className="text-xs text-luxury-cream/50">@akshaiunisexsalonpragathinagar</p>
-                </div>
+                <h4 className="text-xs uppercase tracking-wider font-bold text-white font-body">Follow on Instagram</h4>
               </a>
 
             </div>
@@ -246,7 +237,7 @@ export default function BookingForm({ selectedService, onClearService }: Booking
                         value={formData.phone}
                         onChange={handleInputChange}
                         required
-                        placeholder="75699 79965"
+                        placeholder="Enter 10-digit mobile number"
                         className="w-full pl-10 pr-4 py-3.5 rounded-sm bg-bg-dark border border-white/5 text-sm text-white placeholder-luxury-cream/25 focus:outline-none focus:ring-1 focus:ring-primary/40 focus:border-primary/40 transition-all font-body font-light"
                       />
                     </div>
