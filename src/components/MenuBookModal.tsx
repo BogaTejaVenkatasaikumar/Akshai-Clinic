@@ -551,8 +551,6 @@ export default function MenuBookModal({ isOpen, onClose }: MenuBookModalProps) {
           <div className="absolute bottom-3 left-3 w-3 h-3 border-b-2 border-l-2 border-amber-400/40 pointer-events-none z-10" />
           <div className="absolute bottom-3 right-3 w-3 h-3 border-b-2 border-r-2 border-amber-400/40 pointer-events-none z-10" />
 
-          {/* Back page (current page) */}
-          <div
           {/* Single page — slides out then new page slides in */}
           <div
             className="absolute inset-0 bg-[#121012] overflow-hidden"
