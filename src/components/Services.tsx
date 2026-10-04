@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import { Scissors, Sparkles, Smile, Crown, Droplets, Clock, ArrowUpRight, Flame, Brush } from "lucide-react";
+import { Scissors, Sparkles, Crown, Droplets, Brush, ArrowUpRight } from "lucide-react";
 import { SERVICE_ITEMS } from "../data";
 import { ServiceItem } from "../types";
 
@@ -20,27 +20,6 @@ export default function Services({ onServiceSelect }: ServicesProps) {
   ] as const;
 
   const filteredServices = SERVICE_ITEMS.filter((item) => item.category === activeTab);
-
-  // Dynamic Icon selector based on keywords to increase visual luxury
-  const getServiceIcon = (serviceName: string, category: string) => {
-    const title = serviceName.toLowerCase();
-    if (title.includes("cut") || title.includes("trim")) {
-      return <Scissors className="w-5 h-5 text-secondary" />;
-    }
-    if (title.includes("botox") || title.includes("protein") || title.includes("keratin")) {
-      return <Flame className="w-5 h-5 text-secondary" />;
-    }
-    if (title.includes("facial") || title.includes("clean") || title.includes("glow")) {
-      return <Sparkles className="w-5 h-5 text-secondary" />;
-    }
-    if (title.includes("spa") || title.includes("hydrate") || title.includes("nourish")) {
-      return <Droplets className="w-5 h-5 text-secondary" />;
-    }
-    if (title.includes("bridal") || title.includes("groom") || title.includes("makeup")) {
-      return <Crown className="w-5 h-5 text-secondary" />;
-    }
-    return <Smile className="w-5 h-5 text-secondary" />;
-  };
 
   return (
     <section id="services" className="relative py-20 bg-bg-charcoal border-y border-primary/10 overflow-hidden">
@@ -112,19 +91,6 @@ export default function Services({ onServiceSelect }: ServicesProps) {
                   className="group relative p-6 rounded-lg bg-bg-dark border border-white/5 hover:border-primary/40 hover:bg-bg-dark transition-all shadow-inner hover:shadow-[0_12px_24px_-10px_rgba(166,58,58,0.3)] flex flex-col justify-between"
                 >
                   <div>
-                    {/* Header: Icon & Duration info */}
-                    <div className="flex items-center justify-between mb-4">
-                      <div className="h-10 w-10 rounded-sm bg-bg-charcoal group-hover:bg-primary/10 border border-white/5 group-hover:border-primary/35 flex items-center justify-center transition-all shadow-md">
-                        {getServiceIcon(service.name, service.category)}
-                      </div>
-                      
-                      {/* Estimated Duration */}
-                      <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-sm bg-bg-charcoal border border-white/5 font-mono text-[10px] text-accent font-semibold uppercase tracking-wider">
-                        <Clock className="w-3 h-3 text-secondary" />
-                        {service.duration}
-                      </div>
-                    </div>
-
                     {/* Title */}
                     <h3 className="text-base sm:text-lg font-bold font-body text-white tracking-wide group-hover:text-secondary transition-colors uppercase leading-snug mb-2.5">
                       {service.name}

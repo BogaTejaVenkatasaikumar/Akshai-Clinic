@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import { Menu, X, Calendar, Phone, Sun, Moon } from "lucide-react";
+import { Menu, X, Calendar, Phone, Sun, Moon, BookOpen } from "lucide-react";
 import Logo from "./Logo";
+import MenuBookModal from "./MenuBookModal";
 
 interface NavbarProps {
   onBookClick: () => void;
@@ -12,6 +13,7 @@ export default function Navbar({ onBookClick }: NavbarProps) {
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
   const [isDark, setIsDark] = useState(false);
+  const [isMenuModalOpen, setIsMenuModalOpen] = useState(false);
 
   useEffect(() => {
     if (localStorage.getItem("theme") === "dark") {
@@ -146,6 +148,14 @@ export default function Navbar({ onBookClick }: NavbarProps) {
               >
                 {isDark ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
               </button>
+              <button
+                onClick={() => setIsMenuModalOpen(true)}
+                className="inline-flex items-center gap-2 rounded-sm border border-secondary/35 bg-bg-charcoal/80 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-luxury-cream transition-all duration-200 hover:-translate-y-0.5 hover:border-secondary/70 hover:bg-secondary/10 hover:text-white"
+                aria-label="View Rate Card"
+              >
+                <BookOpen className="w-3.5 h-3.5 text-secondary" />
+                Rate Card
+              </button>
               <a
                 href="tel:+917569979965"
                 className="inline-flex items-center gap-2 rounded-sm border border-secondary/35 bg-bg-charcoal/80 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-luxury-cream transition-all duration-200 hover:-translate-y-0.5 hover:border-secondary/70 hover:bg-secondary/10 hover:text-white"
@@ -228,6 +238,16 @@ export default function Navbar({ onBookClick }: NavbarProps) {
               </nav>
 
               <div className="border-t border-white/5 pt-4 flex flex-col gap-3">
+                <button
+                  onClick={() => {
+                    setIsOpen(false);
+                    setIsMenuModalOpen(true);
+                  }}
+                  className="flex items-center justify-center gap-2 font-body text-sm font-semibold text-luxury-cream/90 bg-white/5 py-3 rounded-md hover:bg-white/10"
+                >
+                  <BookOpen className="w-4 h-4 text-secondary" />
+                  View Rate Card
+                </button>
                 <a
                   href="tel:+917569979965"
                   className="flex items-center justify-center gap-2 font-body text-sm font-semibold text-luxury-cream/90 bg-white/5 py-3 rounded-md hover:bg-white/10"
@@ -250,6 +270,12 @@ export default function Navbar({ onBookClick }: NavbarProps) {
           </motion.div>
         )}
       </AnimatePresence>
+
+      {/* Rate Card Menu Modal */}
+      <MenuBookModal
+        isOpen={isMenuModalOpen}
+        onClose={() => setIsMenuModalOpen(false)}
+      />
     </>
   );
 }

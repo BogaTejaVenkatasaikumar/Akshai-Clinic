@@ -286,13 +286,13 @@ export default function BookingForm({ selectedService, onClearService }: Booking
                       {/* Populate OptGroups */}
                       <optgroup label="✂️ Men's Grooming" className="bg-bg-charcoal">
                         {SERVICE_ITEMS.filter(s => s.category === "men").map(service => (
-                          <option key={service.id} value={service.name}>{service.name} ({service.duration})</option>
+                          <option key={service.id} value={service.name}>{service.name}</option>
                         ))}
                       </optgroup>
                       
                       <optgroup label="👑 Women's Styling" className="bg-bg-charcoal">
                         {SERVICE_ITEMS.filter(s => s.category === "women").map(service => (
-                          <option key={service.id} value={service.name}>{service.name} ({service.duration})</option>
+                          <option key={service.id} value={service.name}>{service.name}</option>
                         ))}
                       </optgroup>
 
@@ -323,16 +323,34 @@ export default function BookingForm({ selectedService, onClearService }: Booking
                     <label className="block text-[11px] font-bold uppercase tracking-widest text-accent mb-2 font-body">
                       Preferred Date *
                     </label>
-                    <div className="relative">
-                      <Calendar className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-accent" />
+                    <div
+                      className="relative cursor-pointer"
+                      onClick={() => {
+                        const dateInput = document.getElementById("booking-date-input") as HTMLInputElement;
+                        if (dateInput) {
+                          try {
+                            dateInput.showPicker();
+                          } catch (e) {
+                            dateInput.focus();
+                          }
+                        }
+                      }}
+                    >
+                      <Calendar className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-accent pointer-events-none" />
                       <input
+                        id="booking-date-input"
                         type="date"
                         name="date"
                         value={formData.date}
                         onChange={handleInputChange}
+                        onClick={(e) => {
+                          try {
+                            (e.target as HTMLInputElement).showPicker();
+                          } catch (err) {}
+                        }}
                         required
                         min={new Date().toISOString().split("T")[0]}
-                        className="w-full pl-10 pr-4 py-3.5 rounded-sm bg-bg-dark border border-white/5 text-sm text-white focus:outline-none focus:ring-1 focus:ring-primary/40 focus:border-primary/40 transition-all font-body font-light"
+                        className="w-full pl-10 pr-4 py-3.5 rounded-sm bg-bg-dark border border-white/5 text-sm text-white focus:outline-none focus:ring-1 focus:ring-primary/40 focus:border-primary/40 transition-all font-body font-light cursor-pointer"
                       />
                     </div>
                   </div>
